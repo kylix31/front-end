@@ -4,6 +4,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { Header } from './components/Header/Header';
 import { Orders } from './pages/Orders/Orders';
 
+import { CurrentOrder } from './pages/currentOrder/currentOrder';
+
 const queryClient = new QueryClient();
 
 function App() {
@@ -17,7 +19,7 @@ function App() {
             <Orders />
           </Route>
           <Route exact path="/order/:id">
-            <h1>@todo: Implement detail page</h1>
+            <CurrentOrder />
           </Route>
         </Switch>
       </QueryClientProvider>
