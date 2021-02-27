@@ -1,0 +1,50 @@
+{
+  "name": "front-end-test",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.28",
+    "@types/react": "^17.0.2",
+    "@types/react-dom": "^17.0.1",
+    "@types/react-router-dom": "^5.1.7",
+    "express": "^4.17.1",
+    "node-sass": "^4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-query": "^3.9.7",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.0.1",
+    "remove-accents": "^0.4.2",
+    "typescript": "^4.1.5"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn api\" \"yarn start\"",
+    "api": "http-server ./api -p 5000 -d false --cors -s",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^4.1.1",
+    "faker": "^4.1.0",
+    "http-server": "^0.11.1",
+    "rimraf": "^2.6.3"
+  }
+}
