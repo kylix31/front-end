@@ -197,9 +197,9 @@ export const CurrentOrder = () => {
                 </Grid>
                 <Divider />
                 <Grid
-                  className={classes.lastContainerGrid}
                   container
-                  spacing={2}
+                  spacing={4}
+                  className={classes.lastContainerGrid}
                 >
                   <Grid item>
                     <Grid container direction="column">
@@ -209,18 +209,18 @@ export const CurrentOrder = () => {
                       <Grid item>
                         <h6>{`${data.address.street}, ${data.address.number}`}</h6>
                       </Grid>
-                    </Grid>
-                    <Grid item>
-                      <h6>{`${data.address.city} - ${data.address.state} - ${data.address.postcode}`}</h6>
+                      <Grid item>
+                        <h6>{`${data.address.city} - ${data.address.state} - ${data.address.postcode}`}</h6>
+                      </Grid>
                     </Grid>
                   </Grid>
                   <Grid item>
-                    <Grid container>
+                    <Grid container direction="column">
                       <Grid item>
                         <h5>FORMA DE PAGAMENTO:</h5>
-                        <Grid item>
-                          <h6>{data.payment_method}</h6>
-                        </Grid>
+                      </Grid>
+                      <Grid item>
+                        <h6>{data.payment_method}</h6>
                       </Grid>
                     </Grid>
                   </Grid>

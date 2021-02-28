@@ -2,12 +2,7 @@ import React from 'react';
 import { Step, Stepper, StepLabel, StepConnector } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-const STEPS = getSteps();
-
-type AppProps = {
-  step: string;
-  className?: string;
-};
+import { enumToArray } from './helper';
 
 enum Steps {
   'Aguardando pagamento',
@@ -17,15 +12,7 @@ enum Steps {
   'Pedido entrege',
 }
 
-function getSteps() {
-  return [
-    'Aguardando pagamento',
-    'Pagamento aprovado',
-    'Pedido em separação',
-    'Pedido em transporte',
-    'Pedido entrege',
-  ];
-}
+const STEPS = enumToArray(Steps);
 
 const Connector = withStyles({
   alternativeLabel: {
@@ -49,24 +36,10 @@ const Connector = withStyles({
   },
 })(StepConnector);
 
-// function MyCustomStepLabel(props: StepIconProps) {
-//   const classes = useStyles();
-//   const { active, completed } = props;
-
-//   return (
-//     <div
-//       className={clsx(classes.root, {
-//         [classes.active]: active,
-//       })}
-//     >
-//       {completed ? (
-//         <div className={classes.completed} />
-//       ) : (
-//         <div className={classes.circle} />
-//       )}
-//     </div>
-//   );
-// }
+type AppProps = {
+  step: string;
+  className?: string;
+};
 
 export const DesktopSteps = ({ step, className }: AppProps) => {
   return (
